@@ -178,6 +178,8 @@ export function createAntiRaid({ config, logger, cache, verifier }) {
 
   return {
     handleJoin,
-    restoreLockdowns
+    restoreLockdowns,
+    enableLockdown,
+    disableLockdown,
   };
 }

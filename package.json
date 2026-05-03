@@ -1,12 +1,14 @@
 {
   "name": "discord-security-bot",
-  "version": "1.0.0",
-  "description": "Production-ready Discord security bot with anti-link, anti-spam, anti-raid, anti-phishing, verification, and logging.",
+  "version": "2.0.0",
+  "description": "Production-ready Discord security & moderation bot with slash commands.",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
+    "deploy": "node scripts/deploy-commands.js",
+    "deploy:guild": "node scripts/deploy-commands.js",
     "pm2:start": "pm2 start ecosystem.config.cjs",
     "pm2:stop": "pm2 stop discord-security-bot",
     "pm2:restart": "pm2 restart discord-security-bot",
