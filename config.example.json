@@ -1,0 +1,93 @@
+{
+  "logChannelId": "",
+  "verifiedRoleId": "",
+  "whitelistRoleIds": [],
+  "adminRoleIds": [],
+  "antiLink": {
+    "enabled": true,
+    "blockAllLinks": false,
+    "blockDiscordInvites": true,
+    "suspiciousTlds": [
+      ".xyz", ".tk", ".ml", ".cf", ".ga", ".gq",
+      ".click", ".link", ".pw", ".su", ".ws", ".top",
+      ".work", ".club", ".fun", ".win", ".trade", ".science"
+    ],
+    "allowedDomains": [
+      "discord.com", "discord.gg", "discordapp.com",
+      "tenor.com", "giphy.com",
+      "youtube.com", "youtu.be",
+      "twitch.tv",
+      "twitter.com", "x.com",
+      "github.com",
+      "imgur.com"
+    ],
+    "warningDeleteMs": 5000,
+    "extraAllowedDomains": []
+  },
+  "antiSpam": {
+    "enabled": true,
+    "threshold": 5,
+    "windowMs": 5000,
+    "warningDeleteMs": 5000,
+    "baseTimeoutMinutes": 5,
+    "secondTimeoutMinutes": 10,
+    "offenseResetMs": 86400000,
+    "thirdOffenseAction": "kick"
+  },
+  "antiRaid": {
+    "enabled": true,
+    "joinThreshold": 10,
+    "windowMs": 30000,
+    "lockdownMinutes": 10,
+    "restrictEveryoneSendMessages": true,
+    "ignoreBots": true
+  },
+  "antiPhishing": {
+    "enabled": true,
+    "warnOnDetection": true,
+    "escalateOnRepeat": true,
+    "keywords": [
+      "free nitro",
+      "discord nitro free",
+      "nitro giveaway",
+      "click here to claim",
+      "claim your nitro",
+      "claim reward",
+      "you won",
+      "you have won",
+      "giveaway fake",
+      "steam gift",
+      "steam gift card",
+      "gift card free",
+      "verify account",
+      "verify your account",
+      "free gift",
+      "limited time offer",
+      "act now",
+      "claim now",
+      "airdrop",
+      "crypto giveaway",
+      "nft giveaway"
+    ],
+    "suspiciousShorteners": [
+      "bit.ly", "tinyurl.com", "t.co", "ow.ly", "goo.gl",
+      "buff.ly", "is.gd", "rb.gy", "cutt.ly", "shorturl.at",
+      "tiny.cc", "soo.gd", "bc.vc", "su.pr", "snipurl.com",
+      "short.to", "doiop.com", "short.ie", "kl.am",
+      "rubyurl.com", "om.ly", "to.ly", "bit.do", "lnkd.in",
+      "db.tt", "qr.ae", "adf.ly", "bitly.com", "tr.im",
+      "cli.gs", "migre.me", "ff.im", "murl.com",
+      "viralurl.com", "eklly.com"
+    ]
+  },
+  "verification": {
+    "enabled": true,
+    "channelId": "",
+    "channelName": "verify-here",
+    "verifiedRoleName": "Verified",
+    "unverifiedRoleId": "",
+    "unverifiedRoleName": "Unverified",
+    "autoCreateChannel": true,
+    "restrictViewUntilVerified": false
+  }
+}
