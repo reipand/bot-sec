@@ -24,9 +24,11 @@ export async function execute(interaction) {
 
   await interaction.deferReply({ ephemeral: true });
 
-  await antiRaid.enableLockdown(interaction.guild, reason);
+  const activated = await antiRaid.enableLockdown(interaction.guild, reason);
 
   await interaction.editReply({
-    content: "Server is now in **lockdown**. @everyone cannot send messages.",
+    content: activated
+      ? "Server is now in **lockdown**. @everyone cannot send messages."
+      : "Server is already in lockdown.",
   });
 }

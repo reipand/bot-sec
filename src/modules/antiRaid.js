@@ -65,7 +65,7 @@ export function createAntiRaid({ config, logger, cache, verifier }) {
 
   async function enableLockdown(guild, reason) {
     if (activeLockdowns.has(guild.id)) {
-      return;
+      return false;
     }
 
     activeLockdowns.set(guild.id, true);
@@ -97,6 +97,8 @@ export function createAntiRaid({ config, logger, cache, verifier }) {
     setTimeout(async () => {
       await disableLockdown(guild, "Automatic lockdown cooldown expired.");
     }, durationMs);
+
+    return true;
   }
 
   async function disableLockdown(guild, reason) {

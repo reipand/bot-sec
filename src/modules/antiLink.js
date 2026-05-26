@@ -81,11 +81,7 @@ export function createAntiLink({ config, logger }) {
 
       if (invites) {
         for (const invite of invites) {
-          const hostname = extractHostname(invite);
-
-          if (!isAllowed(hostname)) {
-            detected.push({ type: "discord_invite", match: invite });
-          }
+          detected.push({ type: "discord_invite", match: invite });
         }
       }
     }

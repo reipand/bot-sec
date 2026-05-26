@@ -22,6 +22,8 @@ const LEET_MAP = new Map([
 
 function normalizeLeet(text) {
   return text
+    .normalize("NFKC")
+    .replace(/[​-‏⁠﻿]/g, "")
     .toLowerCase()
     .split("")
     .map((char) => LEET_MAP.get(char) ?? char)
